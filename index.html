@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limelight Creative Calculators</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Limelight Creative</h1>
+  <p>Quick Client Calculation Tools</p>
+</header>
+
+<div class="tabs">
+  <button class="tab-button active" data-tab="trial">Trial Calculator</button>
+  <button class="tab-button" data-tab="range">Pricing Range</button>
+</div>
+
+<div id="trial" class="tab-content active">
+
+  <div class="card">
+    <h2>3-Month Trial Calculation</h2>
+
+    <label>Average Customer Value ($)</label>
+    <input id="avgValue" type="number">
+
+    <label>Ad Cost ($)</label>
+    <input id="adCost" type="number">
+
+    <button onclick="calculateTrial()">Calculate Trial Price</button>
+
+    <div id="trialResult" class="result"></div>
+  </div>
+
+</div>
+
+<div id="range" class="tab-content">
+
+  <div class="card">
+    <h2>After-Trial Pricing Range</h2>
+
+    <label>Average Monthly Revenue ($)</label>
+    <input id="monthlyRevenue" type="number">
+
+    <button onclick="calculateRange()">Calculate Range</button>
+
+    <div id="rangeResult" class="result"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
